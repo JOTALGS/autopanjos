@@ -1,38 +1,54 @@
+/* make variables */
+:root {
+  --lightgray: #D9D9D9;
+  --gray: #9c9c9c;
+  --orange: #f42f15;
+  --darkGrey: #464D53;
+  --caloryCard: #656565;
+  --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ff5439 100.75%);
+  --appColor:  #535558;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  mix-blend-mode: overlay;
+  background-color: var(--appColor);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+.stroke-text{
+  color: transparent;
+  font-family: "Agdasima", sans-serif;
+  font-weight: bold;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(250, 243, 243);
+}
+
+.btn{
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  font-weight: bold;
+  border: 4px solid transparent;
+  transition: 300ms all;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover{
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blur{
+  background: rgba(238, 69, 40, 0.69);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -9;
 }

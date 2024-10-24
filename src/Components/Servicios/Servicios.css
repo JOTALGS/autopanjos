@@ -1,0 +1,108 @@
+.Servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 6rem;
+}
+
+.programs-header {
+  display: flex;
+  gap: 5rem;
+  font-weight: bold;
+  font-size: 3rem;
+  justify-content: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: Oswald;
+  font-style: italic;
+}
+
+.programs-categories {
+  display: flex;
+  gap: 2rem;
+}
+
+.category > svg {
+  height: 2rem;
+  fill: white;
+  transform: translateX(-370px);
+}
+
+
+.category {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  padding: 2rem;
+  gap: 1rem;
+  color: white;
+  flex: 1;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+.category > :nth-child(2) {
+  font-size: 1rem;
+  font-weight: bold;
+  max-width: 15vw;
+}
+
+.category > :nth-child(3) {
+  font-size: 0.9rem;
+  line-height: 25px;
+  max-width: 15vw;
+}
+
+.category > :nth-child(5) {
+  font-size: 0.9rem;
+  line-height: 25px;
+  padding-left: 20%;
+  position: absolute;
+  max-width: 40vw;
+}
+
+.category:hover {
+  background-color: rgb(221, 77, 77);
+}
+
+.join-now {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.join-now:hover {
+  cursor: pointer;
+}
+
+.join-now > img {
+  width: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .programs-header {
+      flex-direction: column;
+      gap: 1rem;
+      font-size: x-large;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+  }
+
+  .programs-categories {
+      flex-direction: column;
+  }
+}
+
+.animated-service-title {
+  animation: scaleFont 1s;
+  transform: scale(1.4);
+}
+
+@keyframes scaleFont {
+  0% {
+    transform: scale(1);
+  } 100% {
+    transform: scale(1.4);
+  } 
+}

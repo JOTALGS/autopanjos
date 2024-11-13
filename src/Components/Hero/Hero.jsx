@@ -21,7 +21,7 @@ const Hero = () => {
     <div className="hero" id='home'>
       <div className="blur hero-blur"></div>
 
-        <Header/>
+      <Header/>
       <div className="left-h">
         {/* the best ad */}
         <div className="the-best">
@@ -31,7 +31,15 @@ const Hero = () => {
         {/* Hero text */}
         <div className="hero-text">
           <div className='hero-title'>
-            <span className='stroke-text-animated'> MECANICA AUTOMOTRIZ</span>
+            <div className="title-container">
+              <span className='stroke-text-animated title-one'>
+                MECANICA
+              </span>
+              <span className='title-two stroke-text-animated'>
+                AUTOMOTRIZ
+              </span>
+            </div>
+
             <div style={{ textAlign: 'center', marginBottom: '1rem', marginTop: '1rem', fontSize: '1.1rem', fontWeight: 'lighter' }}>
               <span>
                 servicio y reparacion para autos de todas las marcas

@@ -6,7 +6,6 @@
 
 .left-h {
   padding: 2rem;
-  padding-left: 8rem;
   flex: 4;
   display: flex;
   flex-direction: column;
@@ -97,7 +96,11 @@
   border-radius: 4rem;
   width: fit-content;
   padding: 20px 13px;
-  position: relative;
+
+  position: absolute;
+  top: 10%;
+  left: 36%;
+
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -105,9 +108,24 @@
   font-family: "Agdasima", sans-serif;
   font-size: 19px;
   letter-spacing: 3.5px;
+
+  transition: all 0.3 ease-in-out;
+  opacity: 0; /* Initial state */
+  animation: handleOpacity 1s ease-in-out forwards; /* Add forwards */
+  animation-delay: 3s; /* Delay the start of the animation */
 }
+
 .the-best > span {
   z-index: 2;
+}
+
+@keyframes handleOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
@@ -123,6 +141,7 @@
   text-overflow: inherit;
   width: 80%;
   text-align: center;
+  margin-top: 150px;
 }
 
 .hero-title {
@@ -288,6 +307,23 @@
   font-size: 1.5rem;
 }
 
+.title-container{
+  display: flex;
+  align-content: center;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.title-one {
+  text-align: start;
+  transform: translateX(50px); 
+}
+.title-two {
+  text-align: end;
+  margin-top: 70px;
+  transform: translateX(-150px);
+}
+
 @media screen and (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -296,12 +332,31 @@
   {
     width: 14rem;
   }
+  .left-h {
+    align-items: center;
+  }
+  .hero-title{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .the-best {
     margin-top: 0;
     font-size: small;
+    position: relative;
     align-self: center;
-    transform: scale(0.8);
-  }
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+   }
+   .title-container{
+    margin-left: 0px;
+   }
+   .title-one{
+    transform: translateY(0);
+   }
   .hero-text {
     font-size: xx-large;
     align-items: center;

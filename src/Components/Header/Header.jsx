@@ -23,6 +23,22 @@ const Header = () => {
         </div>
       ) : (
         <ul className="header-menu">
+          {mobile && (
+            <li className="close-menu">
+              <button
+                onClick={() => setMenuOpened(false)}
+                style={{
+                  background: "none",
+                  border: "none",
+                  color: "var(--textColor)",
+                  fontSize: "1.2rem",
+                  cursor: "pointer",
+                }}
+              >
+                ✖
+              </button>
+            </li>
+          )}
           <li>
             <Link
               onClick={() => setMenuOpened(false)}

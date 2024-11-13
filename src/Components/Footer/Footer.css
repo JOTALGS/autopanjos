@@ -76,6 +76,7 @@ section{
     .footer .box-container{
         flex-direction: column;
         gap: 1rem;
+        border: none;
     }
     .footer .box-container .box:nth-child(1){
       padding: 0px;

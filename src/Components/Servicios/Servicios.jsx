@@ -7,16 +7,22 @@ import { motion } from 'framer-motion';
 const Servicios = () => {
   const [expandedProgram, setExpandedProgram] = useState(null);
 
-  // Toggle between expanded and collapsed
+  // Check if the screen width is less than 768px
+  const isMobile = window.innerWidth <= 768;
+
+  // Define initial width for mobile and non-mobile screens
+  const initialWidth = isMobile ? '40%' : '15%';
+
+  // Total width for non-expanded items when one is expanded
+  const collapsedWidth = expandedProgram !== null
+    ? (100 - 90) / (programsData.length - 1) + 'vw'
+    : initialWidth;
+
   const handleClick = (index) => {
-    console.log('expamded:', expandedProgram, index)
     if (expandedProgram === null || expandedProgram === index) {
       setExpandedProgram(expandedProgram === index ? null : index); // Expand or collapse
     }
   };
-
-  // Total width for the non-expanded items when one is expanded
-  const collapsedWidth = expandedProgram !== null ? (100 - 90) / (programsData.length - 1) + 'vw' : '15%';
 
   return (
     <div className="Servicios" id="servicios">
@@ -30,36 +36,37 @@ const Servicios = () => {
           <motion.div
             key={index}
             className="category"
-            initial={{ width: '15%' }} // Initial width
-            animate={{ 
-              width: expandedProgram === index 
+            initial={{ width: initialWidth }} // Set initial width dynamically
+            animate={{
+              width: expandedProgram === index
                 ? '90vw' // Expanded div takes 90vw
-                : collapsedWidth  // Non-expanded divs share remaining space
+                : collapsedWidth // Non-expanded divs share remaining space
             }}
             transition={{ duration: 0.2, ease: 'easeInOut' }} // Smooth transition
           >
             {program.image}
             <span>{program.heading}</span>
             <span>{program.details}</span>
-            <div style={{ zIndex: '1000'}} className="join-now" onClick={() => handleClick(index)}>
+            <div style={{ zIndex: '1000' }} className="join-now" onClick={() => handleClick(index)}>
               <span>{expandedProgram === index ? 'Menos' : 'Saber Mas'}</span>
               <motion.img
                 src={RightArrow}
                 alt="Right Arrow"
                 initial={{ rotate: 0 }} // Initial rotation
                 animate={{ rotate: expandedProgram === index ? 180 : 0 }} // Rotate 180 when expanded
-                transition={{ duration: 0.5}} // Smooth rotation
+                transition={{ duration: 0.5 }} // Smooth rotation
               />
             </div>
-            {expandedProgram === index && 
-            <motion.div className="saber-mas"
-                initial={{ opacity: 0 }} // Initial rotation
-                animate={{ opacity: expandedProgram === index ? 1 : 0 }} // Rotate 180 when expanded
-                transition={{ duration: 1.5}} // Smooth rotation
+            {expandedProgram === index &&
+              <motion.div
+                className="saber-mas"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: expandedProgram === index ? 1 : 0 }}
+                transition={{ duration: 1.5 }}
               >
-              <h3 style={{ fontSize: '18px', fontWeight: 'bolder'}}>{program.subtitle}</h3>
-              <span>{program.detail}</span>
-            </motion.div>
+                <h3 style={{ fontSize: '18px', fontWeight: 'bolder' }}>{program.subtitle}</h3>
+                <span>{program.detail}</span>
+              </motion.div>
             }
           </motion.div>
         ))}
@@ -69,3 +76,4 @@ const Servicios = () => {
 };
 
 export default Servicios;
+

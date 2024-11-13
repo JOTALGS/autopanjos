@@ -52,7 +52,8 @@
 .map {
     border: none;
     position: absolute;
-    width: 40rem;height: 19rem;
+    width: 40rem;
+    height: 19rem;
     right: 8rem;
     top: 2.5rem;
 }
@@ -74,6 +75,12 @@
 @media screen and (max-width: 767px) {
     .testimonials{
         flex-direction: column;
+        height: 100vh;
+        min-height: 900px;
+    }
+    .map{
+        width: 95%;
+        height: 19rem;
     }
     .left-t>:nth-child(2)
     ,.left-t>:nth-child(3){
@@ -99,6 +106,7 @@
     .right-t>:last-child{
         display: block;
         bottom: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

@@ -92,6 +92,18 @@
   .programs-categories {
       flex-direction: column;
   }
+  .category {
+    padding: 1rem;
+    justify-content: center; /* Centers children vertically */
+  }
+  .category > :nth-child(5) {
+    max-width: 80vw;
+    max-height: 35%;
+    padding-left: 30%;
+    overflow-y: auto;
+    align-self: center;
+    justify-self: center;
+  }
 }
 
 .animated-service-title {

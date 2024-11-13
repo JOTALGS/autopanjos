@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import wp from "../../assets/whatsapp-logo.jpg"
 
 const Footer = () => {
   return (

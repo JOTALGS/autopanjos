@@ -1,7 +1,4 @@
 import React from "react";
-import nb from '../../assets/nb.png';
-import adidas from '../../assets/adidas.png'
-import nike from '../../assets/nike.png'
 import tick from "../../assets/tick.png";
 import "./Nosotros.css";
 const Nosotros = () => {
@@ -41,11 +38,6 @@ const Nosotros = () => {
           las marcas y modelos. Contamos con un eqipo de mecanicos que esta ampliamente capacitado
           para la reparacion especializada y mantenimiento de vehiculos con motores a inyeccion electronica
         </span>
-        <div className="partners">
-              <img src={nb} alt="" />
-              <img src={adidas} alt="" />
-              <img src={nike} alt="" />
-        </div>
       </div>
     </div>
   );

@@ -4,10 +4,14 @@
   gap: 2rem;
   padding: 0 2rem;
   margin-bottom: 6rem;
+  min-height: 2500px;
 }
+
+
 
 .programs-header {
   display: flex;
+  position: relative;
   gap: 5rem;
   font-weight: bold;
   font-size: 3rem;
@@ -18,8 +22,14 @@
   font-style: italic;
 }
 
+
+
 .programs-categories {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
   gap: 2rem;
 }
 
@@ -40,7 +50,12 @@
   flex: 1;
   justify-content: space-between;
   transition: all 1s;
+  height: 600px;
+  width: 80%;
+  padding: 100px;
 }
+
+
 
 .category > :nth-child(2) {
   font-size: 1rem;
@@ -51,25 +66,37 @@
 .category > :nth-child(3) {
   font-size: 0.9rem;
   line-height: 25px;
-  max-width: 15vw;
 }
 
-.category > :nth-child(5) {
-  font-size: 0.9rem;
-  line-height: 25px;
-  padding-left: 20%;
-  position: absolute;
-  max-width: 40vw;
-}
 
 .category:hover {
   background-color: rgb(221, 77, 77);
+}
+
+.pictures {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: absolute;
+  left: 40%;
+  bottom: 50%;
+  height: 100px;
+  width: 200px;
+}
+.pictures>img {
+  height: 100px;
+  width: 200px;
+  object-fit: fill;
 }
 
 .join-now {
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  margin-right: 15px;
 }
 .join-now:hover {
   cursor: pointer;
@@ -80,6 +107,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .Servicios {
+    height: 2750px;
+  }
   .programs-header {
       flex-direction: column;
       gap: 1rem;
@@ -88,21 +118,42 @@
       justify-content: center;
       margin-top: 2rem;
   }
+  .pictures> :nth-child(1) {
+    position: absolute;
+    width: 60%;
+    right: 20%;
+    top: 0%;
+    align-self: start;
+  }
+  .pictures> :nth-child(2) {
+      display: none;
+  }
+  .join-now {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    max-height: 50%;
+    margin-right: 15px;
+  }
 
   .programs-categories {
       flex-direction: column;
   }
   .category {
-    padding: 1rem;
-    justify-content: center; /* Centers children vertically */
+      padding: 1.5rem;
+      justify-content: center; /* Centers children vertically */
+      width: 99%;
+  }
+  .category > :nth-child(2) {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .category > :nth-child(3) {
+    margin-top: 1rem;
+    width: 80%;
   }
   .category > :nth-child(5) {
-    max-width: 80vw;
-    max-height: 35%;
-    padding-left: 30%;
-    overflow-y: auto;
-    align-self: center;
-    justify-self: center;
+    display: none;  
   }
 }
 

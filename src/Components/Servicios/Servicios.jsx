@@ -1,74 +1,157 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Servicios.css';
 import { programsData } from '../../data/programsData';
-import RightArrow from '../../assets/rightArrow.png';
-import { motion } from 'framer-motion';
+import { useScroll } from 'framer-motion';
+import { useState } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Servicios = () => {
-  const [expandedProgram, setExpandedProgram] = useState(null);
+  const { scrollYProgress } = useScroll(); // Hook to track scroll progress
+  const containerRef = useRef(null);
+  const titleRef = useRef(null);
 
-  // Check if the screen width is less than 768px
-  const isMobile = window.innerWidth <= 768;
 
-  // Define initial width for mobile and non-mobile screens
-  const initialWidth = isMobile ? '40%' : '15%';
+  useEffect(() => {
+    const title = titleRef.current;
+  
+      // Animation for regular categories
+      gsap.to(title, {
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 1%",
+          end: "+=1800",
+          pin: true,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      });
+      
+      const container = containerRef.current;
+      const categories = gsap.utils.toArray(".category");
+      gsap.to(container, {
+        scrollTrigger: {
+          trigger: container,
+          start: "top 10%",
+          end: "+=2000",
+          pin: true,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      })
 
-  // Total width for non-expanded items when one is expanded
-  const collapsedWidth = expandedProgram !== null
-    ? (100 - 90) / (programsData.length - 1) + 'vw'
-    : initialWidth;
+      categories.forEach((category, index) => {
 
-  const handleClick = (index) => {
-    if (expandedProgram === null || expandedProgram === index) {
-      setExpandedProgram(expandedProgram === index ? null : index); // Expand or collapse
-    }
-  };
+        if (index === 0) {
+          gsap.to(category, {
+            scale: 0.85,
+            y: -0,
+            zIndex: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: category,
+              start: "20% center",
+              end: "+=500",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          });
+        } else if (index === 1) {
+          gsap.to(category, {
+            scale: 0.85,
+            y: -400,
+            zIndex: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: category,
+              start: "30% center",
+              end: "+=500",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          });
+        } else if (index === 2) {
+          gsap.to(category, {
+            scale: 0.85,
+            y: -800,
+            zIndex: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: category,
+              start: "20% center",
+              end: "+=500",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          });
+        } else if (index === 3) {
+          gsap.to(category, {
+            scale: 0.85,
+            y: -1200,
+            zIndex: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: category,
+              start: "20% center",
+              end: "+=500",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          });
+        } else if (index === 4) {
+          gsap.to(category, {
+            scale: 0.85,
+            y: -1600,
+            zIndex: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: category,
+              start: "10% center",
+              end: "+=500",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          });
+        }
+
+      });
+
+    return () => {
+      ScrollTrigger.kill(); // Clean up on component unmount
+    };
+  }, [programsData]);
 
   return (
-    <div className="Servicios" id="servicios">
-      <div className="programs-header">
+    <div className={`Servicios`} id="servicios">
+      <div className={`programs-header`} ref={titleRef}>
         <span className="stroke-text">Conoce algunos</span>
         <span className="animated-service-title">Servicios</span>
         <span className="stroke-text">que ofrecemos</span>
       </div>
-      <div className="programs-categories">
+      <div className="programs-categories" ref={containerRef}>
         {programsData.map((program, index) => (
-          <motion.div
+          <div
             key={index}
-            className="category"
-            initial={{ width: initialWidth }} // Set initial width dynamically
-            animate={{
-              width: expandedProgram === index
-                ? '90vw' // Expanded div takes 90vw
-                : collapsedWidth // Non-expanded divs share remaining space
-            }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }} // Smooth transition
+            className={`category`}
           >
             {program.image}
             <span>{program.heading}</span>
-            <span>{program.details}</span>
-            <div style={{ zIndex: '1000' }} className="join-now" onClick={() => handleClick(index)}>
-              <span>{expandedProgram === index ? 'Menos' : 'Saber Mas'}</span>
-              <motion.img
-                src={RightArrow}
-                alt="Right Arrow"
-                initial={{ rotate: 0 }} // Initial rotation
-                animate={{ rotate: expandedProgram === index ? 180 : 0 }} // Rotate 180 when expanded
-                transition={{ duration: 0.5 }} // Smooth rotation
-              />
+            <div>{program.details}</div>
+
+            {/* Join Now button */}
+            <div className="pictures">
+              {program.picture1}
+              {program.picture2}
             </div>
-            {expandedProgram === index &&
-              <motion.div
-                className="saber-mas"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: expandedProgram === index ? 1 : 0 }}
-                transition={{ duration: 1.5 }}
-              >
-                <h3 style={{ fontSize: '18px', fontWeight: 'bolder' }}>{program.subtitle}</h3>
-                <span>{program.detail}</span>
-              </motion.div>
-            }
-          </motion.div>
+            <div className="join-now">
+
+              <span>{program.detail}</span>
+            </div>
+          </div>
         ))}
       </div>
     </div>
@@ -76,4 +159,3 @@ const Servicios = () => {
 };
 
 export default Servicios;
-

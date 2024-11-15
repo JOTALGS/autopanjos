@@ -12,6 +12,7 @@
     "dotenv": "^16.4.5",
     "emailjs": "^4.0.1",
     "framer-motion": "^10.0.1",
+    "gsap": "^3.12.5",
     "jsonwebtoken": "^9.0.2",
     "motion": "^10.15.5",
     "netlify": "^13.1.2",
@@ -25,7 +26,6 @@
     "sequelize": "^6.37.4",
     "web-vitals": "^2.1.4"
   },
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

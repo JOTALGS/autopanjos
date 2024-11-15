@@ -14,6 +14,8 @@ export const programsData = [
       "Diagnóstico y reparación de sistemas de inyección electrónica.",
     subtitle: "Mantenimiento y Limpieza de Inyectores",
     detail: "Nuestro servicio de inyección electrónica incluye diagnóstico preciso, mantenimiento y limpieza de los sistemas de inyección. Utilizamos herramientas de última tecnología para garantizar el funcionamiento eficiente del motor, mejorando el rendimiento y alargando su vida útil.",
+    picture1: (<img src="/images/ie1.jpg" alt="Inyeccion Electronica" />),
+    picture2: (<img src="/images/ie2.jpg" alt="Inyeccion Electronica" />)
   },
   {
     image:
@@ -42,6 +44,8 @@ export const programsData = [
       "Servicio completo de mantenimiento y reparación mecánica para todo tipo de vehículos.",
     subtitle: "Soluciones Integrales para el Cuidado del Vehículo",
     detail: "Ofrecemos un servicio de mecánica integral que abarca desde revisiones generales hasta reparaciones complejas de motor, transmisión y frenos. Nuestro equipo de expertos asegura que cada componente de tu vehículo esté en perfecto estado para evitar fallos costosos y prolongar la vida útil del vehiculo.",
+    picture1: (<img src="/images/me1.jpg" alt="Inyeccion Electronica" />),
+    picture2: (<img src="/images/me2.jpg" alt="Inyeccion Electronica" />)
   },
   {
     image: 
@@ -52,6 +56,8 @@ export const programsData = [
       "Revisión y reparación de sistemas eléctricos y electrónicos de vehículos.",
     subtitle: "Soluciones de Alta Tecnología para Sistemas Electrónicos",
     detail: "Nuestro servicio de electrónica automotriz cubre todos los sistemas eléctricos del vehículo, incluyendo luces, sensores, alarmas y sistemas de control electrónico. Detectamos fallos eléctricos rápidamente utilizando equipos especializados y realizamos las reparaciones necesarias para mantener tu vehículo seguro y funcionando a pleno rendimiento.",
+    picture1: (<img src="/images/ea1.jpg" alt="Inyeccion Electronica" />),
+    picture2: (<img src="/images/ea2.jpg" alt="Inyeccion Electronica" />)
   },
   {
     image:
@@ -91,6 +97,8 @@ export const programsData = [
       "Instalación, recarga y mantenimiento de sistemas de aire acondicionado.",
     subtitle: "Climatización Óptima para Cada Viaje",
     detail: "Servicio especializado de aire acondicionado automotriz, que incluye la carga de refrigerante, limpieza de filtros, reparación de fugas y optimización del sistema de climatización. ",
+    picture1: (<img src="/images/aa1.jpg" alt="Inyeccion Electronica" />),
+    picture2: (<img src="/images/aa2.jpg" alt="Inyeccion Electronica" />)
   },
   {
     image: 
@@ -137,6 +145,8 @@ export const programsData = [
       "Alineación y balanceo de ruedas para un manejo seguro y mejorando la estabilidad.",
     subtitle: "Ajustes Precisos para una Conducción Suave",
     detail: "El servicio de alineación y balanceo es clave para asegurar un manejo fluido, mejorando el control y reduciendo el desgaste irregular de los neumáticos. Utilizamos tecnología de precisión para ajustar el balanceo de los neumaticos, garantizando una conducción más suave, segura y eficiente.",
+    picture1: (<img src="/images/ab1.jpg" alt="Inyeccion Electronica" />),
+    picture2: (<img src="/images/ab2.jpg" alt="Inyeccion Electronica" />)
   },
 ];
 

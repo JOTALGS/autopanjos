@@ -55,6 +55,17 @@
     font-size: 3rem;
     font-weight: bold;
   }
+
+  .img-r {
+    display: flex;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+  }
+  .img-r:hover {
+    scale: 1.1;
+  }
+
+
   .details-r {
     display: flex;
     flex-direction: column;
@@ -73,7 +84,9 @@
     width: 2rem;
     height: 2rem;
   }
-  
+
+
+
   .partners {
     display: flex;
     gap: 1rem;

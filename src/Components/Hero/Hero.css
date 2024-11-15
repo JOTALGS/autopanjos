@@ -265,13 +265,13 @@
 
 .hero-img {
   position: absolute;
-  top: 10rem;
+  top: 8rem;
   right: 8rem;
-  width: 23rem;
+  width: 35rem;
 }
 .hero-back {
   position: absolute;
-  top: 4rem;
+  top: 6.5rem;
   right: 20rem;
   z-index: -1;
   width: 15rem;

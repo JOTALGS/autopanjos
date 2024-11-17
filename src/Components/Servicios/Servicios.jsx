@@ -50,7 +50,7 @@ const Servicios = () => {
           categories.forEach((category, index) => {
             gsap.to(category, {
               scale: 0.85,
-              y: index * -300, // Adjust based on index
+              y: index * - 420, // Adjust based on index
               zIndex: 0,
               ease: "none",
               scrollTrigger: {
@@ -69,7 +69,7 @@ const Servicios = () => {
           categories.forEach((category, index) => {
             gsap.to(category, {
               scale: 0.85,
-              y: index * -400, // Adjust smaller y value for mobile
+              y: index * - 500, // Adjust smaller y value for mobile
               zIndex: 0,
               ease: "none",
               scrollTrigger: {

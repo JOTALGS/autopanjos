@@ -6,10 +6,12 @@ import Footer from './Components/Footer/Footer';
 import Contacto from './Components/Contacto/Contacto';
 import Contact from './Components/Contact/Contact';
 import Encuentranos from './Components/Encuentranos/Encuentranos';
+import Header from './Components/Header/Header';
 
 function App() {
   return (
     <div className="App">
+      <Header/>
       <Hero/>
       <Servicios/>
       <Nosotros/>

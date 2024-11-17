@@ -50,8 +50,8 @@
   flex: 1;
   justify-content: space-between;
   transition: all 1s;
-  height: 600px;
   width: 80%;
+  height: 300px;
   padding: 100px;
   border: 1px solid white;
 }

@@ -21,69 +21,41 @@ const Hero = () => {
     <div className="hero" id='home'>
       <div className="blur hero-blur"></div>
 
-      <Header/>
       <div className="left-h">
-        {/* the best ad */}
+
         <div className="the-best">
           <div className="best-point"></div>
           <span>SERVICIOS DE MECANICA MULTIMARCA</span>
         </div>
-        {/* Hero text */}
-        <div className="hero-text">
-          <div className='hero-title'>
-            <div className="title-container">
-              <span className='stroke-text-animated title-one'>
-                MECANICA
-              </span>
-              <span className='title-two stroke-text-animated'>
-                AUTOMOTRIZ
-              </span>
-            </div>
 
-            <div style={{ textAlign: 'center', marginBottom: '1rem', marginTop: '1rem', fontSize: '1.1rem', fontWeight: 'lighter' }}>
-              <span>
-                servicio y reparacion para autos de todas las marcas
-              </span>
-            </div>
-          <div>
-            <span className="stroke-text text-animated ">PANJOS</span>
-          </div>
-          </div>
+        <div className='hero-title'>
+          <span className='stroke-text-animated title-one'>
+            MECANICA
+          </span>
+          <span className='title-two stroke-text-animated'>
+            AUTOMOTRIZ
+          </span>
         </div>
 
-        {/* experience figures 
-        <div className="figures">
-          <div>
-            <span>
-              <NumberCounter end={140} start={100} delay={4} preFix="+" />
-            </span>
-            <span>expert coaches</span>
-          </div>
-          <div>
-            <span>
-              <NumberCounter end={978} start={878} delay={4} preFix="+" />
-            </span>
-            <span>Members joined</span>
-          </div>
-          <div>
-            <span>
-              <NumberCounter end={50} delay={2} preFix="+" />
-            </span>
-            <span>fitness programs</span>
-          </div>
+        <div className='hero-subtitle'>
+          <span>
+            servicio y reparacion para autos de todas las marcas
+          </span>
         </div>
- */}
-      <div style={{ width: '80%' }}>
+
+        <div className="hero-name">
+          <span className="stroke-text text-animated ">PANJOS</span>
+        </div>
+    
         <div className="hero-btn">
-            <Link
-              to="encuentranos"
-              spy={true}
-              smooth={true}
-            >
-              Encuentranos!
-            </Link>
+          <Link
+            to="encuentranos"
+            spy={true}
+            smooth={true}
+          >
+            Encuentranos!
+          </Link>
         </div>
-      </div>
       </div>
 
       {/* Right Side */}
@@ -95,7 +67,7 @@ const Hero = () => {
         <img className="hero-img" src={hero_image} alt="" />
         <motion.img
           initial={{right: mobile? "11rem": '11rem' }}
-          whileInView={{ right: "20rem" }}
+          whileInView={{ right: "17rem" }}
           transition={transition}
           className="hero-back"
           src={hero_back}

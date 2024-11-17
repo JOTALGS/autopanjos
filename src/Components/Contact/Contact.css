@@ -63,7 +63,7 @@
   
   .screen {
     position: relative;
-    background: var(--planCard);
+    background: #ffffff;
     border-radius: 15px;
   }
   
@@ -144,7 +144,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #080808;
+    color: #df0c0c;
     font-size: 26px;
   }
   
@@ -156,7 +156,7 @@
     bottom: -10px;
     width: 25px;
     height: 4px;
-    background: #0f0e0f;
+    background: #df0c0c;
   }
   
   .app-contact {
@@ -197,7 +197,8 @@
   }
   
   .app-form-control:focus {
-    border-bottom-color: #000000;
+    border-bottom-color: #df0c0c;
+    background-color: #df0c0c0e;
   }
   
   .app-form-button {
@@ -214,7 +215,7 @@
   }
   
   .app-form-button:hover {
-    color: #b9134f;
+    color: #df0c0c;
   }
   
   .credits {
@@ -241,6 +242,7 @@
     .container{
       width: 100%;
       padding: 10px;
+      padding-bottom: 2rem;
     }
 
     .screen-body {

@@ -265,8 +265,8 @@
 
 .hero-img {
   position: absolute;
-  top: 8rem;
-  right: 8rem;
+  top: 5rem;
+  right: -10%;
   width: 35rem;
 }
 .hero-back {

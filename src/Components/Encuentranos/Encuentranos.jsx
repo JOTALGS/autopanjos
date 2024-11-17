@@ -5,7 +5,7 @@ const Encuentranos = () => {
 
   const transition = { type: "spring", duration: 1 };
   return (
-    <div className="testimonials" id="encuentranos">
+    <div className="encuentranos" id="encuentranos">
       <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}

@@ -89,17 +89,7 @@ const Hero = () => {
       {/* Right Side */}
       <div className="right-h">
 
-        {/* heart rate */}
-          <motion.div
-            initial={{ right: "-2rem" }}
-            whileInView={{ right: "4rem" }}
-            transition={transition}
-            className="heart-rate"
-          >
-            <img src={brand2} alt="" />
-            <img src={brand3} alt="" />
-            <img src={brand1} alt="" />
-          </motion.div>
+
 
         {/* hero images */}
         <img className="hero-img" src={hero_image} alt="" />
@@ -112,18 +102,6 @@ const Hero = () => {
           alt=""
         />
 
-        {/* calories */}
-        <motion.div
-          initial={{ right: "32rem" }}
-          whileInView={{ right: "28rem" }}
-          transition={transition}
-          className="calories"
-        >
-          <img src={brand4} alt="" />
-          <img src={brand5} alt="" />
-          <img src={brand6} alt="" />
-          <img src={brand7} alt="" />
-        </motion.div>
       </div>
     </div>
   );

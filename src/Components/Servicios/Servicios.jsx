@@ -44,82 +44,46 @@ const Servicios = () => {
         },
       })
 
-      categories.forEach((category, index) => {
-
-        if (index === 0) {
-          gsap.to(category, {
-            scale: 0.85,
-            y: -0,
-            zIndex: 0,
-            ease: "none",
-            scrollTrigger: {
-              trigger: category,
-              start: "20% center",
-              end: "+=500",
-              scrub: true,
-              invalidateOnRefresh: true,
-            },
+      ScrollTrigger.matchMedia({
+        // For screens wider than 768px
+        "(min-width: 768px)": () => {
+          categories.forEach((category, index) => {
+            gsap.to(category, {
+              scale: 0.85,
+              y: index * -300, // Adjust based on index
+              zIndex: 0,
+              ease: "none",
+              scrollTrigger: {
+                trigger: category,
+                start: "20% center",
+                end: "+=500",
+                scrub: true,
+                invalidateOnRefresh: true,
+              },
+            });
           });
-        } else if (index === 1) {
-          gsap.to(category, {
-            scale: 0.85,
-            y: -400,
-            zIndex: 0,
-            ease: "none",
-            scrollTrigger: {
-              trigger: category,
-              start: "30% center",
-              end: "+=500",
-              scrub: true,
-              invalidateOnRefresh: true,
-            },
+        },
+    
+        // For screens narrower than 768px
+        "(max-width: 767px)": () => {
+          categories.forEach((category, index) => {
+            gsap.to(category, {
+              scale: 0.85,
+              y: index * -400, // Adjust smaller y value for mobile
+              zIndex: 0,
+              ease: "none",
+              scrollTrigger: {
+                trigger: category,
+                start: "20% center",
+                end: "+=500",
+                scrub: true,
+                invalidateOnRefresh: true,
+              },
+            });
           });
-        } else if (index === 2) {
-          gsap.to(category, {
-            scale: 0.85,
-            y: -800,
-            zIndex: 0,
-            ease: "none",
-            scrollTrigger: {
-              trigger: category,
-              start: "20% center",
-              end: "+=500",
-              scrub: true,
-              invalidateOnRefresh: true,
-            },
-          });
-        } else if (index === 3) {
-          gsap.to(category, {
-            scale: 0.85,
-            y: -1200,
-            zIndex: 0,
-            ease: "none",
-            scrollTrigger: {
-              trigger: category,
-              start: "20% center",
-              end: "+=500",
-              scrub: true,
-              invalidateOnRefresh: true,
-            },
-          });
-        } else if (index === 4) {
-          gsap.to(category, {
-            scale: 0.85,
-            y: -1600,
-            zIndex: 0,
-            ease: "none",
-            scrollTrigger: {
-              trigger: category,
-              start: "10% center",
-              end: "+=500",
-              scrub: true,
-              invalidateOnRefresh: true,
-            },
-          });
-        }
-
+        },
       });
-
+      
     return () => {
       ScrollTrigger.kill(); // Clean up on component unmount
     };

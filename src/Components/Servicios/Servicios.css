@@ -4,7 +4,7 @@
   gap: 2rem;
   padding: 0 2rem;
   margin-bottom: 6rem;
-  min-height: 2500px;
+  min-height: 3000px;
 }
 
 
@@ -34,7 +34,7 @@
 }
 
 .category > svg {
-  height: 2rem;
+  height: 2.5rem;
   fill: white;
   transform: translateX(-370px);
 }
@@ -53,24 +53,28 @@
   height: 600px;
   width: 80%;
   padding: 100px;
+  border: 1px solid white;
 }
 
 
 
 .category > :nth-child(2) {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   max-width: 15vw;
 }
 
 .category > :nth-child(3) {
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   line-height: 25px;
+  max-width: 15vw;
+
 }
 
 
 .category:hover {
   background-color: rgb(221, 77, 77);
+
 }
 
 .pictures {
@@ -80,13 +84,11 @@
   position: absolute;
   left: 40%;
   bottom: 50%;
-  height: 100px;
-  width: 200px;
 }
-.pictures>img {
+.programs-categories .pictures img {
   height: 100px;
   width: 200px;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .join-now {
@@ -108,7 +110,7 @@
 
 @media screen and (max-width: 768px) {
   .Servicios {
-    height: 2750px;
+    height: 3250px;
   }
   .programs-header {
       flex-direction: column;
@@ -118,15 +120,18 @@
       justify-content: center;
       margin-top: 2rem;
   }
-  .pictures> :nth-child(1) {
+  .programs-categories .pictures img {
+    width: 150px;
     position: absolute;
-    width: 60%;
-    right: 20%;
-    top: 0%;
-    align-self: start;
+
+  }
+  .pictures> :nth-child(1) {
+    margin-left: 40px;
+    transform: translateY(-70px);
   }
   .pictures> :nth-child(2) {
-      display: none;
+    margin-left: 40px;
+    transform: translateY(70px);
   }
   .join-now {
     position: absolute;
@@ -143,6 +148,7 @@
       padding: 1.5rem;
       justify-content: center; /* Centers children vertically */
       width: 99%;
+      gap: 2rem;
   }
   .category > :nth-child(2) {
     font-size: 1.5rem;

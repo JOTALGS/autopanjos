@@ -2,16 +2,8 @@ import React from 'react'
 import "./Hero.css"
 import hero_image from "../../assets/hero_image.png"
 import hero_back from "../../assets/hero_image_back.png"
-import brand1 from "../../assets/brand1.png"
-import brand2 from "../../assets/brand2.png"
-import brand3 from "../../assets/brand3.png"
-import brand4 from "../../assets/brand4.png"
-import brand5 from "../../assets/brand5.png"
-import brand6 from "../../assets/brand6.png"
-import brand7 from "../../assets/brand7.png"
 
 import { motion } from "framer-motion"
-import Header from '../Header/Header'
 import { Link } from "react-scroll";
 
 const Hero = () => {
@@ -25,12 +17,12 @@ const Hero = () => {
 
         <div className="the-best">
           <div className="best-point"></div>
-          <span>SERVICIOS DE MECANICA MULTIMARCA</span>
+          <span>SERVICIOS DE MECÁNICA MULTIMARCA</span>
         </div>
 
         <div className='hero-title'>
           <span className='stroke-text-animated title-one'>
-            MECANICA
+            MECÁNICA
           </span>
           <span className='title-two stroke-text-animated'>
             AUTOMOTRIZ
@@ -39,7 +31,7 @@ const Hero = () => {
 
         <div className='hero-subtitle'>
           <span>
-            servicio y reparacion para autos de todas las marcas
+            Servicio y reparación para autos de todas las marcas
           </span>
         </div>
 

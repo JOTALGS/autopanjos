@@ -102,7 +102,9 @@ const Servicios = () => {
             key={index}
             className={`category`}
           >
-            {program.image}
+            <div className="svg-service" style={{ height: '50px'}}>
+              {program.image}
+            </div>
             <span>{program.heading}</span>
             <div>{program.details}</div>
 

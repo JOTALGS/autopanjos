@@ -7,16 +7,12 @@ const Contact = () => {
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var phone = document.getElementById("phone").value;
-        var age = document.getElementById("age").value;
-        var plan = document.getElementById("plan").value;
         var message = document.getElementById("message").value;
          
-        var url = "https://wa.me/+918766539293?text="
+        var url = "https://wa.me/+59899334970?text="
         +"*Name :* "+name+"%0a"
         +"*Email :* "+email+"%0a"
         +"*Contact No :* "+phone+"%0a"
-        +"*Age :* "+age+"%0a"
-        +"*Plan :* "+plan+"%0a"
         +"*Message :* "+message;
          
         window.open(url,'_blank').focus();

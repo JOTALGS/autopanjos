@@ -69,7 +69,7 @@ export default function Component() {
       ScrollTrigger.create({
         trigger: leftSection,
         start: "top top",
-        end: isMobile ? "bottom+=120% top" : "bottom+=330% top",
+        end: isMobile ? "bottom+=60% top" : "bottom+=330% top",
         pin: true,
         pinSpacing: false,
         scrub: true,
@@ -103,7 +103,7 @@ export default function Component() {
         >
           <div id="left-section" className="py-8 px-4 z-0">
             <h1
-              className={`leading-tight text-4xl md:text-5xl font-bold text-white text-start space-y-2 pt-10`}
+              className={`leading-tight text-3xl md:text-5xl font-bold text-white text-start space-y-2 pt-10`}
               style={{
                 fontFamily: 'Arimo',
                 lineHeight: "1",
@@ -114,7 +114,7 @@ export default function Component() {
               ))}
             </h1>
             <h1
-              className={`${russoOne.className} leading-tight text-4xl md:text-5xl font-bold text-white text-start space-y-2 pt-2`}
+              className={`${russoOne.className} leading-tight text-3xl md:text-5xl font-bold text-white text-start space-y-2 pt-2`}
               style={{
                 lineHeight: "1",
               }}

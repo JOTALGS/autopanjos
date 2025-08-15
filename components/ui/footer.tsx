@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           <h2 className={`${michroma.className} text-lg font-semibold mb-2 mt-6`} >Dirección y Horarios</h2>
           <p className="mb-2">📍 Isla de Flores 1691, Palermo Montevideo</p>
           <p className="mb-4">🕒 Lunes a Viernes: 8:30 AM – 12.30 PM | 14:00 AM – 18.30 PM</p>
-          <div className="w-full h-64">
+          <div className="w-full h-48 sm:h-64">
             {/* Replace with your actual map embed link */}
             <iframe
               title="Ubicación en mapa"
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
       >
         <div id="right-section" className="py-6 px-4">
             <h1
-              className={`leading-tight font-bold text-4xl md:text-5xl text-white text-start space-y-2 pt-10`}
+              className={`leading-tight font-bold text-3xl md:text-5xl text-white text-start space-y-2 pt-10`}
               style={{
                 fontFamily: 'Arimo',
                 lineHeight: "1",
@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
               ))}
             </h1>
             <h1
-              className={`${russoOne.className} leading-tight font-bold text-4xl md:text-5xl text-white text-start space-y-2 pt-2`}
+              className={`${russoOne.className} leading-tight font-bold text-3xl md:text-5xl text-white text-start space-y-2 pt-2`}
               style={{
                 lineHeight: "1",
               }}
